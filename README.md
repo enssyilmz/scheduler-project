@@ -89,21 +89,6 @@ npm run kafka:stop
 npm run docker:logs
 ```
 
-## 🏗️ Proje Yapısı
-scheduler-project/
-├── src/
-│ ├── cache.ts # Cache yönetimi
-│ ├── db.ts # Veritabanı işlemleri
-│ ├── index.ts # Ana uygulama
-│ ├── scheduler.ts # Cron job tanımları
-│ └── kafka/
-│ ├── consumer.ts # Kafka consumer
-│ └── producer.ts # Kafka producer
-├── docker-compose.yml # Docker servisleri
-├── package.json
-├── tsconfig.json
-└── README.md
-
 ## 📊 Veritabanı Tabloları
 
 ### users tablosu
