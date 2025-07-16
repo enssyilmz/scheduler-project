@@ -1,0 +1,31 @@
+{
+  "name": "scheduler-project",
+  "version": "1.0.0",
+  "description": "Kafka ve MSSQL ile çalışan scheduler projesi",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "clean": "rm -rf dist",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "kafka:start": "npm run docker:up && echo 'Kafka ve Zookeeper başlatıldı!'",
+    "kafka:stop": "npm run docker:down && echo 'Kafka ve Zookeeper durduruldu!'"
+  },
+  "dependencies": {
+    "axios": "^1.10.0",
+    "kafkajs": "^2.2.4",
+    "mssql": "^11.0.1",
+    "node-cache": "^5.1.2",
+    "node-cron": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/mssql": "^9.1.7",
+    "@types/node": "^24.0.10",
+    "@types/node-cron": "^3.0.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
